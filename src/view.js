@@ -6,14 +6,12 @@ const views = (function () {
   const addDiv = document.querySelector(".add-and-form");
 
   const addProject = function () {
-    views.addProjectBtn.addEventListener("click", () => {
-      const project = prompt("Enter project name");
-      const html = `
+    const project = prompt("Enter project name");
+    const html = `
       <li class="projects-item" data-project-name="${project.toLowerCase()}">${project}</li>
       `;
-      projectList.insertAdjacentHTML("beforeend", html);
-      return project;
-    });
+    projectList.insertAdjacentHTML("beforeend", html);
+    return project;
   };
 
   return {
