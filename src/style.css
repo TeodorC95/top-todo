@@ -121,3 +121,14 @@ ul {
   color: #aad8d3;
   background-color: var(--dark);
 }
+.project-name-form {
+  padding: 5px;
+}
+.project-name-field {
+  font-size: 1.1rem;
+  width: 87%;
+}
+.project-name-form input[type="submit"] {
+  padding: 3px;
+  float: right;
+}

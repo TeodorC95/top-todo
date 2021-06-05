@@ -1,4 +1,13 @@
 import "./style.css";
+import model from "./model";
+import views from "./view";
 
-const addProjectBtn = document.getElementById("new-project");
-const addItemBtn = document.getElementById("new-item");
+const controlProjects = function () {
+  const test = views.addProject();
+
+  model[test] = test;
+  // views.addProject();
+  console.log(model);
+};
+console.log(model);
+controlProjects();
