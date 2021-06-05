@@ -14,11 +14,22 @@ const views = (function () {
     return project;
   };
 
+  const makeActive = function (el) {
+    projectList.addEventListener("click", e => {
+      if (!e.target.classList.contains("projects-item")) return;
+      document.querySelectorAll(".projects-item").forEach(project => {
+        project.classList.remove("projects-active");
+      });
+      e.target.classList.add("projects-active");
+    });
+  };
+
   return {
     addProjectBtn,
     addItemBtn,
     projectList,
     addProject,
+    makeActive,
   };
 })();
 export default views;

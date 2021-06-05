@@ -44,7 +44,8 @@ ul {
   display: block;
   cursor: pointer;
 }
-.navigation li:hover {
+.navigation li:hover,
+.projects-active {
   background-color: rgba(238, 238, 238, 0.3);
 }
 .list-view li {
