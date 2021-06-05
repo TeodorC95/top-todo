@@ -66,6 +66,7 @@ ul {
 .item-left,
 .item-right {
   max-width: 50%;
+  width: 250px;
 }
 .list-item label {
   text-align: left;
@@ -78,4 +79,45 @@ ul {
 
 .list-item input[type="range"] {
   margin-top: 10px;
+}
+.item-right span {
+  float: right;
+}
+#new-project {
+  width: 100%;
+  padding: 0.6rem;
+  background-color: transparent;
+  color: #aad8d3;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: ease-in all 0.1s;
+  -webkit-transition: ease-in all 0.1s;
+  -moz-transition: ease-in all 0.1s;
+  -ms-transition: ease-in all 0.1s;
+  -o-transition: ease-in all 0.1s;
+}
+#new-project:hover {
+  color: #00adb5;
+  background-color: #aad8d3;
+}
+
+#new-item {
+  float: right;
+  padding: 0.6rem;
+  color: var(--dark);
+  background-color: transparent;
+  font-size: 1rem;
+  border: 1px solid var(--dark);
+  border-radius: 30px;
+  cursor: pointer;
+  transition: linear all 0.2s;
+  -webkit-transition: linear all 0.2s;
+  -moz-transition: linear all 0.2s;
+  -ms-transition: linear all 0.2s;
+  -o-transition: linear all 0.2s;
+}
+#new-item:hover {
+  color: #aad8d3;
+  background-color: var(--dark);
 }

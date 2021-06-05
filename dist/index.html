@@ -8,6 +8,13 @@
       href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+      integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>Document</title>
     <script defer src="main.js"></script>
   </head>
@@ -24,31 +31,42 @@
           <li class="projects-item">Stavka 4</li>
           <li class="projects-item">Stavka 5</li>
         </ul>
+        <button id="new-project">
+          <i class="fa fa-plus-square-o" aria-hidden="true"></i> Add new project
+        </button>
       </div>
       <div class="list-view">
-        <ul class="list">
-          <li class="list-item">
+        <ul class="list" data-project="projekat">
+          <li class="list-item" data-itemid="123456">
             <div class="item-left">
               <h2>Implement this</h2>
-              <p>
-                Implemementation of the new feature. Lorem ipsum, dolor sit amet
-                consectetur adipisicing elit. Ex quibusdam error quod qui, quasi
-                et saepe labore hic sit, dignissimos cum perferendis. Atque amet
-                vel corporis consequatur? Ipsa, blanditiis aut!
-              </p>
+              <p>Implemementation of the new feature.</p>
             </div>
             <div class="item-right">
-              <form>
-                <label for="date">Due:</label>
+              <form class="date-priority-form">
+                <label for="date">Due</label>
                 <input type="date" id="dueDate" /><br />
                 <label for="priority">Priority</label>
-                <input type="range" min="1" max="5" value="1" />
+                <input type="number" min="1" max="5" value="1" id="priority" />
+                <input type="submit" value="OK" />
               </form>
             </div>
           </li>
-          <li class="list-item">Implement that</li>
+          <li class="list-item">
+            <div class="item-left">
+              <h2>Implement that</h2>
+              <p>Another feature.</p>
+            </div>
+            <div class="item-right">
+              <p>Date: <span>22.12.2012</span></p>
+              <p>Priority: <span>High</span></p>
+            </div>
+          </li>
           <li class="list-item">Publish</li>
         </ul>
+        <button id="new-item">
+          <i class="fa fa-plus-square-o" aria-hidden="true"></i> Add new task
+        </button>
       </div>
     </div>
   </body>

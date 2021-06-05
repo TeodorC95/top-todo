@@ -1,3 +1,4 @@
 import "./style.css";
 
-console.log("test");
+const addProjectBtn = document.getElementById("new-project");
+const addItemBtn = document.getElementById("new-item");
