@@ -24,6 +24,32 @@ const views = (function () {
     });
   };
 
+  const showModal = function () {
+    addItemBtn.addEventListener("click", function () {});
+  };
+
+  const showMainList = function () {
+    const html = `
+        <ul class="list" data-project="projekat">
+          <li class="list-item" data-itemid="123456">
+            <div class="item-left">
+              <h2>Implement this</h2>
+              <p>Implemementation of the new feature.</p>
+            </div>
+            <div class="item-right">
+              <form class="date-priority-form">
+                <label for="date">Due</label>
+                <input type="date" id="dueDate" /><br />
+                <label for="priority">Priority</label>
+                <input type="number" min="1" max="5" value="1" id="priority" />
+                <input type="submit" value="OK" />
+              </form>
+            </div>
+          </li>
+        </ul>
+    `;
+  };
+
   return {
     addProjectBtn,
     addItemBtn,
