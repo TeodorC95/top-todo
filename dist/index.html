@@ -25,7 +25,7 @@
     <div class="main">
       <div class="navigation">
         <ul class="projects">
-          <li class="projects-item">Projekat</li>
+          <li class="projects-item" data-project="projekat">Projekat</li>
         </ul>
         <div class="add-and-form">
           <button id="new-project">
@@ -70,6 +70,14 @@
           <i class="fa fa-plus-square-o" aria-hidden="true"></i> Add new task
         </button>
       </div>
+    </div>
+    <div class="modal-overlay modal-hidden"></div>
+    <div class="modal modal-hidden">
+      <form class="modal-form">
+        <input type="text" class="mod-container" placeholder="task name" />
+        <input type="text" class="mod-desc" placeholder="description" />
+        <input type="submit" value="OK" />
+      </form>
     </div>
   </body>
 </html>

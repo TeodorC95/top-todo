@@ -4,29 +4,43 @@ const views = (function () {
   const projectList = document.querySelector(".projects");
   const projectForm = document.querySelector(".project-name-form");
   const addDiv = document.querySelector(".add-and-form");
+  const modal = document.querySelector(".modal");
+  const modalOverlay = document.querySelector(".modal-overlay");
+  const modalForm = document.querySelector(".modal-form");
+
+  let activeProject = "";
 
   const addProject = function () {
     const project = prompt("Enter project name");
     const html = `
-      <li class="projects-item" data-project-name="${project.toLowerCase()}">${project}</li>
+      <li class="projects-item" data-project="${project.toLowerCase()}">${project}</li>
       `;
     projectList.insertAdjacentHTML("beforeend", html);
     return project;
   };
 
-  const makeActive = function (el) {
+  const makeActive = function () {
     projectList.addEventListener("click", e => {
       if (!e.target.classList.contains("projects-item")) return;
       document.querySelectorAll(".projects-item").forEach(project => {
         project.classList.remove("projects-active");
       });
       e.target.classList.add("projects-active");
+      activeProject = e.target.dataset.project;
+      console.log(activeProject);
     });
   };
 
   const showModal = function () {
-    addItemBtn.addEventListener("click", function () {});
+    addItemBtn.addEventListener("click", function () {
+      [modal, modalOverlay].forEach(e => e.classList.remove("modal-hidden"));
+    });
   };
+
+  const closeModal = function () {
+    [modal, modalOverlay].forEach(e => e.classList.add("modal-hidden"));
+  };
+  modalOverlay.addEventListener("click", closeModal);
 
   const showMainList = function () {
     const html = `
@@ -56,6 +70,9 @@ const views = (function () {
     projectList,
     addProject,
     makeActive,
+    showModal,
+    modalForm,
+    activeProject,
   };
 })();
 export default views;

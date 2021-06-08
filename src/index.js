@@ -8,6 +8,13 @@ const controlProjects = function () {
     model[test] = [];
   });
 
-  views.makeActive();
+  window.addEventListener("load", console.log(model));
+  views.showModal();
+  views.projectList.addEventListener("click", e => {
+    if (!e.target.classList.contains("projects-item")) return;
+    views.makeActive();
+    model.active = views.activeProject;
+    console.log(model);
+  });
 };
 controlProjects();

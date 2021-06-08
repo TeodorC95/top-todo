@@ -11,6 +11,7 @@ body {
   font-family: "Nunito Sans", sans-serif;
   background-color: #393e46;
   color: #eeeeee;
+  position: relative;
 }
 h1 {
   padding: 30px;
@@ -132,4 +133,41 @@ ul {
 .project-name-form input[type="submit"] {
   padding: 3px;
   float: right;
+}
+
+.modal-overlay {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: rgba(238, 238, 238, 0.3);
+  /* filter: blur(5px);
+  -webkit-filter: blur(5px); */
+}
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  background: #393e46;
+  padding: 2rem;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.modal input {
+  font-size: 1.2rem;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.modal-hidden {
+  visibility: hidden;
 }
